@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>PlotlyLine.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+PlotlyLine.py</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">pandas </span><span class="s0">as </span><span class="s1">pd</span>
+<span class="s0">import </span><span class="s1">plotly.express </span><span class="s0">as </span><span class="s1">px</span>
+<span class="s0">import </span><span class="s1">time</span>
+
+<span class="s1">df = pd.read_csv(</span><span class="s2">'Weather1.csv'</span><span class="s1">)</span>
+
+<span class="s1">start1 = time.time()</span>
+
+<span class="s1">fig = px.line(df</span><span class="s0">, </span><span class="s1">x=</span><span class="s2">'date'</span><span class="s0">, </span><span class="s1">y=</span><span class="s2">'raw'</span><span class="s1">)</span>
+
+<span class="s1">fig.show()</span>
+
+<span class="s1">done2 = time.time()</span>
+<span class="s1">elapsed2 = done2 - start1</span>
+
+<span class="s1">print(</span><span class="s2">&quot;Draw: &quot;</span><span class="s0">, </span><span class="s1">elapsed2)</span>
+
+
+</pre>
+</body>
+</html>
